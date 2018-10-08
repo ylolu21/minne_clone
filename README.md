@@ -22,3 +22,18 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## 概要
+個人の技術向上のために、既存のHPを複製してみる。
+
+
+
+
+## DB
+
+
+フォローテーブル
+|Column|Type|Options|
+|follow_id|reference|null: false, foreign_key: true|
+|follower_id|reference|null: false, foreign_key: true|
