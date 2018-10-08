@@ -32,8 +32,21 @@ Things you may want to cover:
 
 ## DB
 
+ユーザーテーブル
+|Column|Type|Options|
+|:--:|:--:|:--:|
+|name|string|null: false|
+|icon|string||
+|favorite_image|string||
+|homepage_url|string||
+|blog_url|string||
+|twitter_account|string||
+|facebook_account|string||
+instagram_account|string||
+|mixi_account|string|
 
 フォローテーブル
 |Column|Type|Options|
+|:--:|:--:|:--:|
 |follow_id|reference|null: false, foreign_key: true|
 |follower_id|reference|null: false, foreign_key: true|
