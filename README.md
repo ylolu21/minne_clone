@@ -31,8 +31,11 @@ Things you may want to cover:
 
 
 ## DB
+***
 
-ユーザーテーブル
+
+### ユーザーテーブル
+***
 |Column|Type|Options|
 |:--:|:--:|:--:|
 |name|string|null: false|
@@ -45,8 +48,47 @@ Things you may want to cover:
 instagram_account|string||
 |mixi_account|string|
 
-フォローテーブル
+#### Association
+- has_many:products
+- has_many:likes, through: :likes
+- has_many:follows
+- has_many:messages
+
+
+### followsテーブル
+***
 |Column|Type|Options|
 |:--:|:--:|:--:|
 |follow_id|reference|null: false, foreign_key: true|
 |follower_id|reference|null: false, foreign_key: true|
+
+#### Association
+- belongs_to: users
+
+
+### productsテーブル
+***
+|Column|Type|Options|
+|:--:|:--:|:--:|
+|name|string|null: false|
+|price|int|null: false|
+|category_id|reference|null: false, foreign_key: true|
+|stocks|int|null: false|
+|size|string|null: false|
+|shipping_method|string|null: false|
+|description|text||
+
+#### Association
+- belongs_to: users
+- 
+
+### reviewsテーブル
+***
+|Column|Type|Options|
+|:--:|:--:|:--:|
+|score|int|null: false|
+|body|text|null: false|
+
+#### Association
+- belongs_to:products
+- belongs_to:user
