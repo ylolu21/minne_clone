@@ -27,7 +27,7 @@ Things you may want to cover:
 ***
 |Column|Type|Options|
 |:--:|:--:|:--:|
-|nickname|string|null: false|
+|nickname|string|null: false, index: true|
 |email|string|null: false|
 |icon|string||
 |favorite_image|string||
@@ -43,7 +43,7 @@ Things you may want to cover:
 - has_many:carts
 - has_many:likes
 - has_many:products, through: :likes
-- has_one:authors
+- has_one:authors, dependent: :destroy
 
 
 ### followsテーブル
@@ -82,6 +82,7 @@ Things you may want to cover:
 |account_name|string|null: false|
 |account_type|int|null: false|
 |account_number|int|null: false|
+|product_count|int|null: false|
 
 
 #### Association
@@ -93,7 +94,7 @@ Things you may want to cover:
 ***
 |Column|Type|Options|
 |:--:|:--:|:--:|
-|product_name|string|null: false|
+|product_name|string|null: false, index: true|
 |price|int|null: false|
 |size|string|null: false|
 |quantity|int|null: false|
@@ -105,15 +106,15 @@ Things you may want to cover:
 |author_id|reference|null: false, foreign_key: true|
 
 #### Association
-- belongs_to: authors
+- belongs_to: authors, counter_cache: true
 - belongs_to: categorys
 - has_many: likes
-- has_many: carts, through: :cart_products
 - has_many: cart_products
-- has_many: tags, through: :tag_products
+- has_many: carts, through: :cart_products
 - has_many: tag_products
-- has_many: features, through: :feature_products
+- has_many: tags, through: :tag_products
 - has_many: feature_products
+- has_many: features, through: :feature_products
 
 
 ### likesテーブル
@@ -157,7 +158,7 @@ Things you may want to cover:
 |:--:|:--:|:--:|
 |category_code|int|null: false|
 |category_path|string|null: false|
-|category_name|string|null: false|
+|category_name|string|null: false, index: true|
 
 #### Association
 - has_many: products
@@ -166,7 +167,7 @@ Things you may want to cover:
 ***
 |Column|Type|Options|
 |:--:|:--:|:--:|
-|tag_name|string|null: false|
+|tag_name|string|null: false, index: true|
 
 #### Association
 - has_many: tag_products
