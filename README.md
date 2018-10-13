@@ -100,8 +100,8 @@ Things you may want to cover:
 |quantity|int|null: false|
 |description|text||
 |attention|text||
-|publishing_status|int|null: false|
-|sales_status|int|null: false|
+|publishing_status|int|null: false, default: 0, limit: 1|
+|sales_status|int|null: false, default: 0, limit: 1|
 |category_id|reference|null: false, foreign_key: true|
 |author_id|reference|null: false, foreign_key: true|
 
