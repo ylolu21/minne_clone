@@ -158,7 +158,7 @@ Things you may want to cover:
 |:--:|:--:|:--:|
 |category_code|int|null: false|
 |category_path|string|null: false|
-|category_name|string|null: false, index: true|
+|name|string|null: false, index: true|
 
 #### Association
 - has_many: products
@@ -167,7 +167,7 @@ Things you may want to cover:
 ***
 |Column|Type|Options|
 |:--:|:--:|:--:|
-|tag_name|string|null: false, index: true|
+|name|string|null: false, index: true|
 
 #### Association
 - has_many: tag_products
@@ -188,7 +188,7 @@ Things you may want to cover:
 ***
 |Column|Type|Options|
 |:--:|:--:|:--:|
-|feature_name|string|null: false|
+|name|string|null: false|
 
 #### Association
 - has_many: feature_products
