@@ -32,7 +32,7 @@
     &__logo {
       max-width: $logoMaxWidth;
       width: 30%;
-      height: 40px;
+      height: $headerHeightSize;
       display: flex;
       align-items: center;
       a {
@@ -50,7 +50,7 @@
       &__form {
         &__body {
           border: 1px solid $borderColor;
-          height: 40px;
+          height: $headerHeightSize;
           border-radius: 3px;
           position:relative; 
           .m-header__content__search-window__form__category {
@@ -119,14 +119,14 @@
           }
         }
         .m-header__content__bookmark__item-text {
-          font-size: 18px;
+          font-size: $headerFontSize;
           height: $bookmarkItemSize;
           padding: 4px 0;
         }
         .m-header__content__bookmark__item-icon {
           height: $bookmarkItemSize;
           width: $bookmarkItemSize;
-          font-size: 20px;
+          font-size: $headerFontSize;
         }
       }
     }
@@ -148,7 +148,6 @@
         align-items: center;
         a {
           @include link();
-          color: black;
         }
       }
     }
@@ -184,7 +183,6 @@
     margin: 0 auto;
     padding: 40px;
     &__section {
-      margin-top: 96px;
       &__header {
         h2 {
           text-align: center;
@@ -260,7 +258,6 @@
               &__image {
                 @include sns__image__size();
                 margin-right: 10px;
-                color: #315096;
               }
               &__name {
                 @include link();
