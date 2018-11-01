@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require "csv"
+
+CSV.foreach('db/category_sample.csv') do |row|
+  Category.create(:category_code => row[0], :category_path => row[1], :name => row[2])
+end
