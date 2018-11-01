@@ -1,0 +1,275 @@
+
+.mouse-hover {
+  @include hover();
+}
+
+.fa {
+  color: black;
+}
+
+.group-info-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0;
+  height: $menuHeaderBarHeight;
+  background-color: $mainBackgroundColor;
+  border-bottom: 1px solid $borderColor;
+  z-index: 1;
+}
+
+.m-header {
+  border-bottom: 1px solid $borderColor;
+  width: 100%;
+  margin-top: $menuHeaderBarHeight;
+  &__content {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    &__logo {
+      max-width: $logoMaxWidth;
+      width: 30%;
+      height: $headerHeightSize;
+      display: flex;
+      align-items: center;
+      a {
+        height: 100%;
+        .menu-header__content__logo__image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &__search-window {
+      width: 540px;
+      margin-left: 40px;
+      align-items: center;
+      &__form {
+        &__body {
+          border: 1px solid $borderColor;
+          height: $headerHeightSize;
+          border-radius: 3px;
+          position:relative; 
+          .m-header__content__search-window__form__category {
+            height: 100%;
+            display: inline-block;
+            width: $serchCategoryWidth;
+            position:absolute;
+            select {
+              width: 170px;
+              height: 100%;
+              cursor: pointer;
+              border-style: none;
+              background-color: $mainBackgroundColor;
+            }
+          }
+          .m-header__content__search-window__form__text {
+            position:absolute;
+            display: inline-block;
+            left: 170px;
+            height: 100%;
+            width: 305px;
+            // background-color: red;
+            border-left: 1px solid $borderColor;
+            // border-left: 1px solid $borderColor;
+            input {
+              height: 100%;
+              width: 100%;
+              border-style: none;
+              // background-color: red;
+            }
+          }
+          .m-header__content__search-window__form__action {
+            position:absolute;
+            display: inline-block;
+            height: 100%;
+            left: 475px;
+            input {
+              border-style: none;
+              border-left: 1px solid $borderColor;
+              padding: 0 10px;
+              height: 100%;
+              width: 65px;
+              color: white;
+              background-color: gray;
+            }
+          }
+        }
+      }
+    }
+    &__bookmark {
+      width: 30%;
+      height: 40px;
+      align-items: center;
+      %ul {
+        list-style: none;
+      }
+      &__list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        @include link();
+        .m-header__content__bookmark__item {
+          margin-left: 15px;
+          .bookmark__item-icon__image {
+            @include circle(32);
+          }
+        }
+        .m-header__content__bookmark__item-text {
+          font-size: $headerFontSize;
+          height: $bookmarkItemSize;
+          padding: 4px 0;
+        }
+        .m-header__content__bookmark__item-icon {
+          height: $bookmarkItemSize;
+          width: $bookmarkItemSize;
+          font-size: $headerFontSize;
+        }
+      }
+    }
+  }
+}
+
+.category-nav {
+  border-bottom: 1px solid $borderColor;
+  .category-bar {
+    &__list {
+      max-width: $maxWidth;
+      margin: 0 auto;
+      display: flex;
+      &__item {
+        text-align: center;
+        padding:0 10px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        a {
+          @include link();
+        }
+      }
+    }
+  }
+}
+
+.carousel {
+  padding: 24px 0;
+  &__content {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    .carousel__slidewrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      &__item {
+        width: $listItemWidth;
+        .slidewrapper__item__image {
+          width: 100%;
+          height: 240px;
+        }
+      }
+    }
+  }
+}
+
+.m-page {
+  background-color: $mainBackgroundColor;
+  &__content {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 40px;
+    &__section {
+      &__header {
+        h2 {
+          text-align: center;
+          font-size: 24px;
+        }
+      }
+      &__content {
+        padding-top: 16px;
+        &__list {
+          display: flex;
+          justify-content: space-between;
+          .m-page__content__section__content__item {
+            width: $listItemWidth;
+            border: 1px solid $borderColor;
+            &__body {
+              display: flex;
+              text-decoration: none;
+              color: black;
+              background-color: white;
+              padding: 10px;
+              &__image {
+                height: 96px;
+                width: 96px;
+                margin-right: 10px;
+              }
+              &__content {
+                &__title {
+                  font-weight: bold;
+                }
+                &__description {
+                  font-size: 14px;
+                  padding-top: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.m-footer {
+  background-color: $mainBackgroundColor;
+  &__app {
+    height: 340px;
+    .m-footer__app-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__nav {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    .m-footer__nav__sitemap {
+      padding: 40px;
+      display: flex;
+      &__content {
+        width: 20%;
+        padding-right: 24px;
+        &__header {
+          font-weight: bold;
+          margin-bottom: 12px;
+        }
+        &__list {
+          &__item {
+            margin-bottom: 12px;
+            height: 24px;
+            .sns__account {
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+              &__image {
+                @include sns__image__size();
+                margin-right: 10px;
+              }
+              &__name {
+                @include link();
+              }
+            }
+          }
+        }
+      }
+      .sitemap__help-guide {
+        width: 40%;
+      }
+    }
+  }
+}
+
