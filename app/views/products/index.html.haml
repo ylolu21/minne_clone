@@ -1,0 +1,134 @@
+.group-info-banner
+
+.m-header
+  .m-header__content
+    %h1.m-header__content__logo.mouse-hover
+      = link_to root_path do
+        = image_tag 'noimage.png', class: 'menu-header__content__logo__image'
+    .m-header__content__search-window
+      %form{action: "/", class: 'm-header__content__search-window__form'}
+        .m-header__content__search-window__form__body
+          .m-header__content__search-window__form__category
+            %select.mouse-hover
+              %option{value: "0"} すべてのカテゴリー
+              %option{value: "1"} アクセサリー
+          .m-header__content__search-window__form__text
+            %input{type: 'text', placeholder: '作品(色・素材・カテゴリー)・作家'}
+          .m-header__content__search-window__form__action.mouse-hover
+            %input{type: "submit", value: "検索"}
+
+    .m-header__content__bookmark
+      %ul.m-header__content__bookmark__list
+        %li.m-header__content__bookmark__item.m-header__content__bookmark__item-text.mouse-hover ホーム
+        %li.m-header__content__bookmark__item.m-header__content__bookmark__item-text.mouse-hover ヘルプ
+        %li.m-header__content__bookmark__item.m-header__content__bookmark__item-icon.mouse-hover
+          = link_to root_path do
+            = image_tag 'noimage.png', class: 'bookmark__item-icon__image'
+        %li.m-header__content__bookmark__item.m-header__content__bookmark__item-icon.mouse-hover
+          = link_to root_path do
+            %i.fa.fa-heart-o
+        %li.m-header__content__bookmark__item.m-header__content__bookmark__item-icon.mouse-hover
+          = link_to root_path do
+            %i.fa.fa-shopping-cart
+
+
+%nav.category-nav
+  .category-bar
+    %ul.category-bar__list
+      %li.category-bar__list__item
+        すべてのカテゴリー
+      %li.category-bar__list__item
+        ランキングからさがす
+      %li.category-bar__list__item
+        = link_to "特集からさがす", root_path
+      %li.category-bar__list__item
+        = link_to "素材をさがす", root_path
+      %li.category-bar__list__item
+        = link_to "食べ物をさがす", root_path
+
+.carousel
+  .carousel__content
+    .carousel__slidewrapper
+      .carousel__slidewrapper__item
+        = link_to root_path do
+          = image_tag 'noimage.png', class: 'slidewrapper__item__image'
+      .carousel__slidewrapper__item
+        = link_to root_path do
+          = image_tag 'noimage.png', class: 'slidewrapper__item__image'
+      .carousel__slidewrapper__item
+        = link_to root_path do
+          = image_tag 'noimage.png', class: 'slidewrapper__item__image'
+
+.m-page
+  .m-page__content
+    %section.m-page__content__section
+      .m-page__content__section__header
+        %h2 minneからのおすすめ
+      .m-page__content__section__content
+        %ul.m-page__content__section__content__list
+          %li.m-page__content__section__content__item
+            = link_to root_path, class: 'm-page__content__section__content__item__body' do
+              = image_tag 'noimage.png', class: 'm-page__content__section__content__item__body__image'
+              .m-page__content__section__content__item__body__content
+                %h3.m-page__content__section__content__item__body__content__title 特別なウェディングアイテム
+                %p.m-page__content__section__content__item__body__content__description リングピロー・ヘッドドレス・ペーパー類、おすすめアイテムがそろっています。
+          %li.m-page__content__section__content__item
+            = link_to root_path, class: 'm-page__content__section__content__item__body' do
+              = image_tag 'noimage.png', class: 'm-page__content__section__content__item__body__image'
+              .m-page__content__section__content__item__body__content
+                %h3.m-page__content__section__content__item__body__content__title 特別なウェディングアイテム
+                %p.m-page__content__section__content__item__body__content__description リングピロー・ヘッドドレス・ペーパー類、おすすめアイテムがそろっています。
+          %li.m-page__content__section__content__item
+            = link_to root_path, class: 'm-page__content__section__content__item__body' do
+              = image_tag 'noimage.png', class: 'm-page__content__section__content__item__body__image'
+              .m-page__content__section__content__item__body__content
+                %h3.m-page__content__section__content__item__body__content__title 特別なウェディングアイテム
+                %p.m-page__content__section__content__item__body__content__description リングピロー・ヘッドドレス・ペーパー類、おすすめアイテムがそろっています。
+
+        .m-page__content__section__content__more
+      .m-page__content__section__footer
+
+.m-footer
+  .m-footer__app
+    = image_tag 'noimage.png', class: 'm-footer__app-image'
+  .m-footer__nav
+    .m-footer__nav__sitemap
+      .m-footer__nav__sitemap__content.sitemap__about
+        %h2.m-footer__nav__sitemap__content__header minneを知る
+        %ul.m-footer__nav__sitemap__content__list
+          %li.m-footer__nav__sitemap__content__list__item minneについて
+          %li.m-footer__nav__sitemap__content__list__item minneで売りたい
+          %li.m-footer__nav__sitemap__content__list__item minneで買いたい
+      .m-footer__nav__sitemap__content.sitemap__reading-material
+        %h2.m-footer__nav__sitemap__content__header 読みもの
+        %ul.m-footer__nav__sitemap__content__list
+          %li.m-footer__nav__sitemap__content__list__item minne mag.
+          %li.m-footer__nav__sitemap__content__list__item minne通信
+          %li.m-footer__nav__sitemap__content__list__item minneの本
+      .m-footer__nav__sitemap__content.sitemap__help-guide
+        %h2.m-footer__nav__sitemap__content__header ヘルプとガイド
+        %ul.m-footer__nav__sitemap__content__list
+          %li.m-footer__nav__sitemap__content__list__item お知らせ
+          %li.m-footer__nav__sitemap__content__list__item よくある質問
+          %li.m-footer__nav__sitemap__content__list__item マニュアル
+          %li.m-footer__nav__sitemap__content__list__item 利用規約
+          %li.m-footer__nav__sitemap__content__list__item お問い合わせ
+      .m-footer__nav__sitemap__content.sitemap__sns
+        %h2.m-footer__nav__sitemap__content__header minneとつながる
+        %ul.m-footer__nav__sitemap__content__list
+          %li.m-footer__nav__sitemap__content__list__item
+            = link_to root_path, class: "sns__account mouse-hover" do
+              = image_tag 'twitter_icon.png', class: 'sns__account__image'
+              %span.sns__account__name Twitter
+          %li.m-footer__nav__sitemap__content__list__item
+            = link_to root_path, class: "sns__account mouse-hover" do
+              = image_tag 'instagram_icon.png', class: 'sns__account__image'
+              %span.sns__account__name Instagram
+          %li.m-footer__nav__sitemap__content__list__item
+            = link_to root_path, class: "sns__account mouse-hover" do
+              = image_tag 'facebook_icon.png', class: 'sns__account__image'
+              %span.sns__account__name Facebook
+          %li.m-footer__nav__sitemap__content__list__item
+            = link_to root_path, class: "sns__account mouse-hover" do
+              = image_tag 'lineat_icon.png', class: 'sns__account__image'
+              %span.sns__account__name LINE@
