@@ -1,0 +1,30 @@
+.m-header
+  .m-header__content
+    %h1.m-header__content__logo.mouse-hover
+      = link_to root_path do
+        = image_tag 'noimage.png', class: 'menu-header__content__logo__image'
+    .m-header__content__search-window
+      %form{action: "/", class: 'm-header__content__search-window__form'}
+        .m-header__content__search-window__form__body
+          .m-header__content__search-window__form__category
+            %select.mouse-hover
+              %option{value: "0"} すべてのカテゴリー
+              %option{value: "1"} アクセサリー
+          .m-header__content__search-window__form__text
+            %input{type: 'text', placeholder: '作品(色・素材・カテゴリー)・作家'}
+          .m-header__content__search-window__form__action.mouse-hover
+            %input{type: "submit", value: "検索"}
+
+    .m-header__content__bookmark
+      %ul.m-header__content__bookmark__list
+        %li.m-header__content__bookmark__item.m-header__content__bookmark__item-text.mouse-hover ホーム
+        %li.m-header__content__bookmark__item.m-header__content__bookmark__item-text.mouse-hover ヘルプ
+        %li.m-header__content__bookmark__item.m-header__content__bookmark__item-icon.mouse-hover
+          = link_to root_path do
+            = image_tag 'noimage.png', class: 'bookmark__item-icon__image'
+        %li.m-header__content__bookmark__item.m-header__content__bookmark__item-icon.mouse-hover
+          = link_to root_path do
+            %i.fa.fa-heart-o
+        %li.m-header__content__bookmark__item.m-header__content__bookmark__item-icon.mouse-hover
+          = link_to root_path do
+            %i.fa.fa-shopping-cart
