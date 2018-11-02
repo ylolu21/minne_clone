@@ -1,0 +1,44 @@
+.m-footer
+  .m-footer__app
+    = image_tag 'noimage.png', class: 'm-footer__app-image'
+  .m-footer__nav
+    .m-footer__nav__sitemap
+      .m-footer__nav__sitemap__content.sitemap__about
+        %h2.m-footer__nav__sitemap__content__header minneを知る
+        %ul.m-footer__nav__sitemap__content__list
+          %li.m-footer__nav__sitemap__content__list__item minneについて
+          %li.m-footer__nav__sitemap__content__list__item minneで売りたい
+          %li.m-footer__nav__sitemap__content__list__item minneで買いたい
+      .m-footer__nav__sitemap__content.sitemap__reading-material
+        %h2.m-footer__nav__sitemap__content__header 読みもの
+        %ul.m-footer__nav__sitemap__content__list
+          %li.m-footer__nav__sitemap__content__list__item minne mag.
+          %li.m-footer__nav__sitemap__content__list__item minne通信
+          %li.m-footer__nav__sitemap__content__list__item minneの本
+      .m-footer__nav__sitemap__content.sitemap__help-guide
+        %h2.m-footer__nav__sitemap__content__header ヘルプとガイド
+        %ul.m-footer__nav__sitemap__content__list
+          %li.m-footer__nav__sitemap__content__list__item お知らせ
+          %li.m-footer__nav__sitemap__content__list__item よくある質問
+          %li.m-footer__nav__sitemap__content__list__item マニュアル
+          %li.m-footer__nav__sitemap__content__list__item 利用規約
+          %li.m-footer__nav__sitemap__content__list__item お問い合わせ
+      .m-footer__nav__sitemap__content.sitemap__sns
+        %h2.m-footer__nav__sitemap__content__header minneとつながる
+        %ul.m-footer__nav__sitemap__content__list
+          %li.m-footer__nav__sitemap__content__list__item
+            = link_to root_path, class: "sns__account mouse-hover" do
+              = image_tag 'twitter_icon.png', class: 'sns__account__image'
+              %span.sns__account__name Twitter
+          %li.m-footer__nav__sitemap__content__list__item
+            = link_to root_path, class: "sns__account mouse-hover" do
+              = image_tag 'instagram_icon.png', class: 'sns__account__image'
+              %span.sns__account__name Instagram
+          %li.m-footer__nav__sitemap__content__list__item
+            = link_to root_path, class: "sns__account mouse-hover" do
+              = image_tag 'facebook_icon.png', class: 'sns__account__image'
+              %span.sns__account__name Facebook
+          %li.m-footer__nav__sitemap__content__list__item
+            = link_to root_path, class: "sns__account mouse-hover" do
+              = image_tag 'lineat_icon.png', class: 'sns__account__image'
+              %span.sns__account__name LINE@
