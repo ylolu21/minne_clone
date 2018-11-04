@@ -1,0 +1,5 @@
+@mixin breadcrumb(){
+  cursor: pointer;
+  text-decoration: none;
+  color: $breadcrumbColor;
+}
