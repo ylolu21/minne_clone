@@ -1,0 +1,91 @@
+.search__sidebar
+  .search__sidebar__categories
+    .search__sidebar__categories__title
+      作品カテゴリーで探す
+    %ul.search__sidebar__categories__list
+      %li.search__sidebar__current-category
+        = link_to 'アクセサリー', categories_path, class: 'categories-list-link'
+      %li.search__sidebar__categories__list__item
+        = link_to '指輪・リング', categories_path, class: 'categories-list-link'
+      %li.search__sidebar__categories__list__item
+        = link_to 'ピアス', categories_path, class: 'categories-list-link'
+      %li.search__sidebar__categories__list__item
+        = link_to 'イヤリング', categories_path, class: 'categories-list-link'
+      %li.search__sidebar__categories__list__item
+        = link_to 'イヤーカフ・イヤーフック', categories_path, class: 'categories-list-link'
+      %li.search__sidebar__categories__list__item
+        = link_to 'ネックレス', categories_path, class: 'categories-list-link'
+      %li.search__sidebar__categories__list__item
+        = link_to 'チョーカー', categories_path, class: 'categories-list-link'
+      %li.search__sidebar__categories__list__item
+        = link_to 'ブレスレット', categories_path, class: 'categories-list-link'
+      %li.search__sidebar__categories__list__item
+        = link_to 'ヘアアクセサリー', categories_path, class: 'categories-list-link'
+      %li.search__sidebar__categories__list__item
+        = link_to 'コサージュ・ブローチ', categories_path, class: 'categories-list-link'
+  .search__sidebar__refine
+    .search__sidebar__refine__title
+      検索絞り込み
+    .search__sidebar__refine__wrapper
+      .search__sidebar__refine__wrapper__content
+        .search__sidebar__refine__wrapper__content__title
+          価格で絞り込む
+        %ul.search__sidebar__refine__wrapper__content__list
+          %li.search__sidebar__refine__wrapper__content__list__item
+            = link_to '〜999円', categories_path
+          %li.search__sidebar__refine__wrapper__content__list__item
+            = link_to '1,000円 〜 2,999円', categories_path
+          %li.search__sidebar__refine__wrapper__content__list__item
+            = link_to '3,000円 〜 4,999円', categories_path
+          %li.search__sidebar__refine__wrapper__content__list__item
+            = link_to '5,000円 〜', categories_path
+        %form{action: categories_path, class: 'search__sidebar__refine__wrapper__content__form'}
+          .search__sidebar__refine__wrapper__content__form__body
+            %input{type: 'text', class: 'search__sidebar__form__input-price'}
+            %span.search_price_en 円 〜
+            %input{type: 'text', class: 'search__sidebar__form__input-price'}
+            %span.search_price_en 円
+          .search__sidebar__refine__wrapper__content__form__submit-button
+            %input{type: "submit", value: "絞り込む"}
+
+      .search__sidebar__refine__wrapper__content
+        .search__sidebar__refine__wrapper__content__title
+          発送日で絞り込む
+        %ul.search__sidebar__refine__wrapper__content__list
+          %li.search__sidebar__refine__wrapper__content__list__item
+            = link_to '1日以内', categories_path
+          %li.search__sidebar__refine__wrapper__content__list__item
+            = link_to '2日以内', categories_path
+          %li.search__sidebar__refine__wrapper__content__list__item
+            = link_to '3日以内', categories_path
+      .search__sidebar__refine__wrapper__content
+        .search__sidebar__refine__wrapper__content__title
+          キーワードを除外する
+        %form{action: categories_path, class: 'search__sidebar__refine__wrapper__content__form'}
+          .search__sidebar__refine__wrapper__content__form__body
+            %input{type: 'text', class: 'search__sidebar__form__input-keyword', placeholder: '除外したいキーワード'}
+      .search__sidebar__refine__wrapper__content
+        .search__sidebar__refine__wrapper__content__title
+          色で絞り込む
+        %form{action: categories_path, class: 'search__sidebar__refine__wrapper__content__form'}
+          %ul.search__sidebar__form__color-box
+            %li.search__sidebar__form__color-box__item
+              %input{type: 'radio', name: 'colors', class: 'search__sidebar__form__color-box__item__button', id: 'color-red'}
+              %label{for: 'color-red', class: 'color-label'}
+            %li.search__sidebar__form__color-box__item
+              %input{type: 'radio', name: 'colors', class: 'search__sidebar__form__color-box__item__button', id: 'color-blue'}
+              %label{for: 'color-blue', class: 'color-label'}
+            %li.search__sidebar__form__color-box__item
+              %input{type: 'radio', name: 'colors', class: 'search__sidebar__form__color-box__item__button', id: 'color-orange'}
+              %label{for: 'color-orange', class: 'color-label'}
+            %li.search__sidebar__form__color-box__item
+              %input{type: 'radio', name: 'colors', class: 'search__sidebar__form__color-box__item__button', id: 'color-green'}
+              %label{for: 'color-green', class: 'color-label'}
+            %li.search__sidebar__form__color-box__item
+              %input{type: 'radio', name: 'colors', class: 'search__sidebar__form__color-box__item__button', id: 'color-1'}
+              %label{for: 'color-1', class: 'color-label'}
+            %li.search__sidebar__form__color-box__item
+              %input{type: 'radio', name: 'colors', class: 'search__sidebar__form__color-box__item__button', id: 'color-2'}
+              %label{for: 'color-2', class: 'color-label'}
+          .search__sidebar__refine__wrapper__content__form__submit-button
+            %input{type: "submit", value: "絞り込む"}

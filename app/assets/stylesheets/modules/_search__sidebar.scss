@@ -1,0 +1,153 @@
+.search__sidebar{
+  float: left;
+  width: 210px;
+  font-size: 12px;
+  &__categories {
+    background-color: $searchSidebarColor;
+    padding: 10px;
+    &__title {
+      height: 32px;
+      line-height: 32px;
+      background-color: #6c5651;
+      color: white;
+      text-align: center;
+      width: 100%;
+    }
+    &__list {
+      width: 100%;
+      .search__sidebar__current-category {
+        background-color: $searchSidebarListColor;
+        font-weight: bold;
+        height: 32px;
+        width: 100%;
+        a {
+          height: 100%;
+          width: calc(100% - 30px);
+          line-height: 32px;
+          display: inline-block;
+          padding: 0 15px;
+        }
+      }
+      &__item {
+        border-top: 1px solid $mainBackgroundColor;
+        height: 32px;
+        width: 100%;
+        a {
+          height: 100%;
+          width: calc(100% - 30px);
+          line-height: 32px;
+          display: inline-block;
+          background-color: white;
+          padding: 0 15px;
+          &:hover {
+            background-color: $searchSidebarListColor;
+          }
+        }
+      }
+    }
+  }
+  &__refine {
+    background-color: $searchSidebarColor;
+    padding: 10px;
+    margin-top: $searchSidebarMarginTopSize;
+    &__title {
+      height: 32px;
+      line-height: 32px;
+      background-color: $searchSidebarTitleColor;
+      color: white;
+      text-align: center;
+    }
+    &__wrapper {
+      background-color: white;
+      padding: 0 15px 15px 15px;
+      &__content {
+        &__title {
+          font-size: 14px;
+          padding: 10px 0;
+        }
+        &__list {
+          &__item {
+            margin-bottom: 5px;
+            a {
+              text-decoration: none;
+              color: $searchSidebarListItemColor;
+            }
+          }
+        }
+        &__form {
+
+          &__body {
+            margin-top: $searchSidebarMarginTopSize;
+            input {
+              padding: 3px;
+              border-radius: 3px;
+              border: 1px solid $borderColor;
+            }
+            .search__sidebar__form__input-price {
+              width: 30%;
+            }
+            .search__sidebar__form__input-keyword {
+              width: calc(100% - 6px);
+            }
+            .search__sidebar__form__input-keyword {
+              width: calc(100% - 6px);
+            }
+            .search_price_en {
+              font-size: 10px;
+            }
+          }
+          .search__sidebar__form__color-box {
+            flex-wrap: wrap;
+            display: flex;
+            &__item {
+              margin: 4px;
+              input {
+                cursor: pointer;
+                display: none;
+              }
+              .color-label {
+                position: relative;
+                content: "";
+                display: block;
+                background-color: red;
+                width: 18px;
+                height: 18px;
+                border-radius: 3px;
+              }
+              .color-label:before {
+                position: absolute;
+                content: "";
+                display: block;
+                border: 1px solid $searchSidebarListItemColor;
+                width: 20px;
+                height: 20px;
+                border-radius: 3px;
+                margin-top: -2px;
+                margin-left: -2px;
+                opacity: 0;
+                top: 0;
+                left: 0;
+              }
+              input:checked + .color-label:before {
+                opacity: 1;
+              }
+            }
+          }
+          &__submit-button {
+            margin-top: $searchSidebarMarginTopSize;
+            input {
+              padding: 5px 15px;
+              background-color: $searchSidebarTitleColor;
+              color: white;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.categories-list-link {
+  @include link();
+}
