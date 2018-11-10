@@ -1,0 +1,29 @@
+.breadcrumb
+  - breadcrumb :category
+  = render partial: 'layouts/breadcrumb'
+.search-tab
+  %ul.search-tab__list
+    %li.search-tab__item.search-tab__item__active
+      = link_to '作品', categories_path
+    %li.search-tab__item.mouse-hover
+      = link_to '作家', categories_path
+.search-header
+  .search-header__title
+    アクセサリーのハンドメイド作品一覧（販売中）
+  .search-header__tag
+    .search-header__tag__content
+      %ul.search-header__tag__content__list
+        %li.search-header__tag__content__item
+          = link_to '簡単', categories_path
+        %li.search-header__tag__content__item
+          = link_to 'イヤリング', categories_path
+        %li.search-header__tag__content__item
+          = link_to 'ドラゴンズブレス', categories_path
+        %li.search-header__tag__content__item
+          = link_to 'パール', categories_path
+        %li.search-header__tag__content__item
+          = link_to 'ピアス', categories_path
+        %li.search-header__tag__content__item
+          = link_to 'シルバー', categories_path
+        %li.search-header__tag__content__item
+          = link_to 'パープル', categories_path
