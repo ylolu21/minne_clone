@@ -1,0 +1,92 @@
+.wrapper {
+  padding: 12px 0 50px 0;
+  @include clearfix();
+  .container {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    height: 600px;
+    .breadcrumb {
+      font-size: $breadcrumbSize;
+      margin-bottom: 10px;
+      .breadcrumbs {
+        color: gray;
+        a {
+          @include breadcrumb();
+        }
+        .current {
+          color: $breadcrumbColor;
+        }
+      }
+    }
+    .search-tab {
+      padding-bottom: 24px;
+      &__list {
+        display: flex;
+        border-bottom: 1px solid $searchTabColor;
+        .search-tab__item {
+          height: 40px;
+          width: 140px;
+          background-color: $searchTabColor;
+          margin-right: 10px;
+          margin-bottom: -1px;
+          border-radius: 4px;
+          a {
+            @include link();
+            height: 100%;
+            width: 100%;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+          }
+        }
+        .search-tab__item__active {
+          background-color: white;
+          a {
+            border: 1px solid $searchTabColor;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    .search-header {
+      margin-bottom: 30px;
+      &__title {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      &__tag {
+        &__content {
+          &__list {
+            display: flex;
+            .search-header__tag__content__item {
+              height: 26px;
+              a {
+                display: inline-block;
+                margin-right: 10px;
+                padding: 0px 10px;
+                border: 1px solid $searchTagColor;
+                border-radius: 20px;
+                font-size: $tagFontSize;
+                color: $searchTagColor;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                line-height: 28px;
+                height: 100%;
+                &:hover {
+                  background-color: $searchTagColor;
+                  color: white;
+                  transition: 0.3s;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+    .search-content {
+      @include clearfix();
+    }
+  }
+}
