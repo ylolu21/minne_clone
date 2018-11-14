@@ -1,10 +1,10 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_category, only: :index
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    # @products = @category.puroducts
   end
 
   # GET /products/1
@@ -70,5 +70,9 @@ class ProductsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
       params.fetch(:product, {})
+    end
+
+    def set_category
+      # @category = Category.find(params[:category_id])
     end
 end
