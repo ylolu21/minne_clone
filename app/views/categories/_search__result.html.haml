@@ -1,0 +1,67 @@
+.search__result
+  .search__result__ranking
+    .search__result__ranking__content
+      .search__result__ranking__content__header
+        .search__result__ranking__content__header__title
+          = link_to '今週のアクセサリーランキング', categories_path
+        .search__result__ranking__content__header__read-more
+          = link_to 'もっと見る', categories_path
+      .search__result__ranking__content__body
+        %ul.search__result__ranking__content__body__list
+          %li.search__result__ranking__content__body__list__item.mouse-hover
+            = link_to categories_path, class: 'search__ranking__item' do
+              = image_tag 'noimage.png', class: 'search__ranking__item__img'
+              .search__ranking__item__rank 1
+              .search__ranking__item__info テストテストテストテスト
+          %li.search__result__ranking__content__body__list__item.mouse-hover
+            = link_to categories_path, class: 'search__ranking__item' do
+              = image_tag 'noimage.png', class: 'search__ranking__item__img'
+              .search__ranking__item__rank 2
+              .search__ranking__item__info テストテストテストテスト
+          %li.search__result__ranking__content__body__list__item.mouse-hover
+            = link_to categories_path, class: 'search__ranking__item' do
+              = image_tag 'noimage.png', class: 'search__ranking__item__img'
+              .search__ranking__item__rank 3
+              .search__ranking__item__info テストテストテストテスト
+          %li.search__result__ranking__content__body__list__item.mouse-hover
+            = link_to categories_path, class: 'search__ranking__item' do
+              = image_tag 'noimage.png', class: 'search__ranking__item__img'
+              .search__ranking__item__rank 4
+              .search__ranking__item__info テストテストテストテスト
+          %li.search__result__ranking__content__body__list__item.mouse-hover
+            = link_to categories_path, class: 'search__ranking__item' do
+              = image_tag 'noimage.png', class: 'search__ranking__item__img'
+              .search__ranking__item__rank 5
+              .search__ranking__item__info テストテストテストテスト
+  .search__result__sort
+    .search__result__sort__nav
+      .search__result__sort__nav__content
+        %ul.search__result__sort__nav__list
+          %li.search__result__sort__nav__list__item 注目順
+          %li.search__result__sort__nav__list__item 新しい順
+          %li.search__result__sort__nav__list__item 古い順
+          %li.search__result__sort__nav__list__item 価格が安い順
+          %li.search__result__sort__nav__list__item 価格が高い順
+          %li.search__result__sort__nav__list__item お気に入りの多い順
+        %ul.search__result__sort__nav__list
+          %li.search__result__sort__nav__list__item すべて
+          %li.search__result__sort__nav__list__item 販売中
+          %li.search__result__sort__nav__list__item 展示のみ
+  .search__result__items
+    %ul.search__result__items__list
+      - for i in 1..42
+        %li.search__result__items__list__item
+          %dl.search__result__items__list__item__content
+            %dt
+              = link_to categories_path do
+                = image_tag 'noimage.png', class: 'search__result__items__list__item__content__img'
+                .search__result__items__list__item__content__like
+                  %i.fa.fa-heart
+            %dd.search__result__items__list__item__content__title
+              作品タイトル
+            %dd.search__result__items__list__item__content__price
+              %span 作品価格
+              %span.search__result__items__list__item__content__price__info
+                販売情報（10人以上が購入等）
+  .search__result__paginate
+    / = paginate @categories
