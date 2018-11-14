@@ -1,0 +1,148 @@
+.search__result {
+  float: left;
+  width: 850px;
+  &__ranking {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: $rankingHeaderColor;
+    &__content {
+      &__header {
+        @include clearfix();
+        margin-bottom: 20px;
+        &__title {
+          font-size: 20px;
+          float: left;
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+        &__read-more {
+          float: right;
+          a {
+            font-size: $searchResultFontsize;
+            text-decoration: none;
+            color: $searchSidebarListItemColor;
+          }
+        }
+      }
+      &__body {
+        &__list {
+          display: flex;
+          justify-content: space-between;
+          &__item {
+            cursor: pointer;
+            width: calc(20% - 10px);
+            padding: 5px;
+            .search__ranking__item {
+              width: 100%;
+              display: block;
+              position: relative;
+              overflow: hidden;
+              text-decoration: none;
+              &__img {
+                width: 152px;
+                height: 152px;
+                object-fit: cover;
+              }
+              &__rank {
+                position: absolute;
+                width: $searchResultRankSize;
+                height: $searchResultRankSize;
+                line-height: $searchResultRankSize;
+                background-color: $rankingHeaderColor;
+                text-align: center;
+                top: 5px;
+                left: 5px;
+                color: black;
+              }
+              &__info {
+                width: 100%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                font-size: $searchResultFontsize;
+                color: $searchSidebarListItemColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__sort{
+    &__nav {
+      margin-bottom: 20px;
+      &__content {
+        display: flex;
+        justify-content: space-between;
+        .search__result__sort__nav__list {
+          &__item {
+            display:inline;
+            color: $searchSidebarListItemColor;
+            font-size: $searchResultFontsize;
+          }
+          &__item:not(:nth-child(1)):before {
+            content:" | ";
+            color:silver;
+          }
+        }
+      }
+    }
+  }
+  &__items {
+    &__list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      &__item {
+        padding: 15px;
+        width: calc(100% / 3 - 30px);
+        &__content {
+          dt {
+            margin-bottom: 5px;
+            a {
+              position: relative;
+              .search__result__items__list__item__content__img {
+                width: 100%;
+              }
+              .search__result__items__list__item__content__like {
+                position: absolute;
+                height: $searchResultProductLikeSize;
+                width: $searchResultProductLikeSize;
+                right: 5px;
+                bottom: 5px;
+                background-color: $searchTabColor;
+                text-align: center;
+                line-height: $searchResultProductLikeSize;
+                border-radius: 50%;
+                .fa {
+                  color: white;
+                }
+              }
+              .search__result__items__list__item__content__like:hover {
+                background-color: $productsLikeBackgroundColor;
+              }
+            }
+          }
+          &__title {
+            color: $searchSidebarListItemColor;
+            font-size: $searchResultFontsize;
+          }
+          &__price {
+            margin-top: 3px;
+            font-size: $searchResultFontsize;
+            span {
+              margin-right: $searchResultFontsize;
+            }
+            &__info {
+              color: $productsPriceInfoColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__paginate {
+  }
+}
