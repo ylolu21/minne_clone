@@ -1,4 +1,4 @@
-@mixin dot-backgroud() {
+@mixin dot-background() {
   background-color: $searchTabColor;
   background-image: radial-gradient($searchSidebarColor 20%, transparent 0), radial-gradient($searchSidebarColor 20%, transparent 0);
   background-position: 0 0, 10px 10px;
