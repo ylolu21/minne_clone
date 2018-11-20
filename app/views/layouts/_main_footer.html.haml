@@ -1,6 +1,7 @@
 .m-footer
-  .m-footer__app
-    = image_tag 'noimage.png', class: 'm-footer__app-image'
+  - if current_page?(root_path)
+    .m-footer__app
+      = image_tag 'noimage.png', class: 'm-footer__app-image'
   .m-footer__nav
     .m-footer__nav__sitemap
       .m-footer__nav__sitemap__content.sitemap__about

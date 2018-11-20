@@ -6,7 +6,7 @@
   &__categories {
     background-color: $searchSidebarColor;
     padding: 10px;
-    @include dot-backgroud();
+    @include dot-background();
     &__title {
       height: 32px;
       line-height: 32px;
@@ -49,8 +49,7 @@
     }
   }
   &__refine {
-    @include dot-backgroud();
-    // background-color: $searchSidebarColor;
+    @include dot-background();
     padding: 10px;
     margin-top: $searchSidebarMarginTopSize;
     &__title {
