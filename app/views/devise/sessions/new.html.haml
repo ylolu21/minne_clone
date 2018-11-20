@@ -12,7 +12,7 @@
             = f.password_field :password, autocomplete: "current-password"
           .login__wrapper__container__signin__form__forgot-email
             パスワードを忘れた方は
-            = link_to 'こちら', 'new_user_session_path'
+            = link_to 'こちら', new_user_session_path
           .login__wrapper__container__signin__form__button
             = f.submit "ログイン", class: 'login_button'
           .login__wrapper__container__signin__form__session-check
