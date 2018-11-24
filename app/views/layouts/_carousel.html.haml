@@ -1,0 +1,8 @@
+.carousel
+  .carousel__content
+    .carousel__slidewrapper
+      - for i in 1..10
+        .carousel__slidewrapper__item
+          #{i}番
+          = link_to root_path do
+            = image_tag 'noimage.png', class: 'slidewrapper__item__image'
