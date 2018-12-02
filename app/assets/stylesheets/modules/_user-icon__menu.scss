@@ -1,0 +1,57 @@
+.user-icon {
+  position: relative;
+  &__menu {
+    display: none;
+    top: 50px;
+    position: absolute;
+    width: $userIconMenuWidth;
+    border: 1px solid gray;
+    right: -35px;
+    background-color: white;
+    &__list {
+      width: 100%;
+    }
+  }
+  &:hover {
+    z-index: 1;
+    .user-icon__menu {
+      display: inline-block;
+      box-sizing: border-box;
+      opacity: 1;
+      &:before {
+        content: "";
+        position: absolute;
+        top: -24px;
+        left: 75%;
+        border: 12px solid transparent;
+        border-bottom: 12px solid gray;
+        z-index: 1;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: -22px;
+        left: 75%;
+        border: 12px solid transparent;
+        border-bottom: 12px solid white;
+        z-index: 2;
+      }
+      &__list {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        li {
+          @include link();
+          margin-bottom: 10px;
+        }
+        a {
+          @include link();
+        }
+      }
+      ul {
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+      }
+    }
+  }
+}
