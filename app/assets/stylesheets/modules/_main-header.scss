@@ -101,20 +101,20 @@
           height: $bookmarkItemSize;
           padding: 4px 0;
           a {
-            @include link();
+            @include link_layout();
           }
         }
         .user-login {
           border: 1px solid black;
           border-radius: 5px;
           padding: 4px;
-          @include link();
+          @include link_layout();
         }
         .m-header__content__bookmark__item-icon {
           height: $bookmarkItemSize;
           width: $bookmarkItemSize;
           font-size: $headerFontSize;
-          @include link();
+          @include link_layout();
         }
       }
     }

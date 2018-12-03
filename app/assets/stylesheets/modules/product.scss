@@ -33,7 +33,7 @@
         display: flex;
         align-items: center;
         a {
-          @include link();
+          @include link_layout();
         }
       }
     }
@@ -124,7 +124,7 @@
                 margin-right: 10px;
               }
               &__name {
-                @include link();
+                @include link_layout();
               }
             }
           }
