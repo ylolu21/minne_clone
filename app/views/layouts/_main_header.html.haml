@@ -25,15 +25,30 @@
         %li.m-header__content__bookmark__item.m-header__content__bookmark__item-text.mouse-hover
           = link_to 'ヘルプ', root_path
         - if user_signed_in?
-          %li.m-header__content__bookmark__item.m-header__content__bookmark__item-icon.mouse-hover
+          %li.m-header__content__bookmark__item.m-header__content__bookmark__item-icon.user-icon
             = link_to root_path do
               = image_tag 'noimage.png', class: 'bookmark__item-icon__image'
+            .user-icon__menu
+              / .user-icon__arrow
+              .user-icon__menu__list
+                = link_to "会員ページへ", root_path
+              %ul.user-icon__menu__list
+                %li
+                  = link_to "メッセージ", root_path
+                %li
+                  = link_to "買った物", root_path
+                %li
+                  = link_to "お気に入り", root_path
+                %li
+                  = link_to "設定", root_path
+              .user-icon__menu__list
+                = link_to "ログアウト", destroy_user_session_path, method: :delete
           %li.m-header__content__bookmark__item.m-header__content__bookmark__item-icon.mouse-hover
             = link_to root_path do
               %i.fa.fa-heart-o
         - else
           %li.m-header__content__bookmark__item.m-header__content__bookmark__item-text.mouse-hover
-            = link_to 'ログイン', root_path, class: 'user-login'
+            = link_to 'ログイン', new_user_session_path, class: 'user-login'
         %li.m-header__content__bookmark__item.m-header__content__bookmark__item-icon.mouse-hover
           = link_to root_path do
             %i.fa.fa-shopping-cart
