@@ -41,11 +41,11 @@
         padding: 10px;
         box-sizing: border-box;
         li {
-          @include link();
+          @include link_layout();
           margin-bottom: 10px;
         }
         a {
-          @include link();
+          @include link_layout();
         }
       }
       ul {

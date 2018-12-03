@@ -7,7 +7,7 @@
     background-color: orange;
     @include login-button();
     a {
-      @include link();
+      @include link_layout();
       color: white;
       display: block;
       line-height: 40px;
