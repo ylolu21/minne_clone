@@ -1,0 +1,22 @@
+.product_right
+  .product_right__sell-frame
+    %span.product_right__sell-frame__label 価格
+    %span.product_right__sell-frame__price
+      = @product.price.to_s(:delimited, delimiter: ',')
+      円
+    // サンプルデータを投入後に切り替え
+    / - if @product.quantity <= 5
+    /   %span.puroduct_right__sell-framep__price-title
+    /     残り#{@product.quantity}点
+    %span.product_right__sell-frame__quantity
+      残り#{@product.quantity}点
+    %span.product_right__sell-frame__sales-count
+      ●人が購入しました
+
+  .product_right__sell-btn
+    / = form_for @cart_product, url: 'cart/line_items', method: :post  do |f|
+    /   = f.hidden_field :cart_id, value: current_cart.id
+    /   = f.hidden_field :product_id, value: product.id
+    /   = f.hidden_field :sale_volume, value: 1
+    /   = f.submit 'カートに入れる', class: 'product_right__sell-btn__add-cart'
+

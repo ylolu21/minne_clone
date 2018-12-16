@@ -5,6 +5,7 @@
     max-width: $maxWidth;
     margin: 0 auto;
     height: 600px;
+    @include clearfix();
     .breadcrumb {
       font-size: $breadcrumbSize;
       margin-bottom: 10px;
