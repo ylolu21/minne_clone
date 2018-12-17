@@ -12,6 +12,9 @@ crumb :category do
   # parent :root
 end
 
+crumb :products do |product|
+  link product.name, product_path(product.id)
+end
 
 # crumb :projects do
 #   link "Projects", projects_path
