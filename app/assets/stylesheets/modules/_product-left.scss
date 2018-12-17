@@ -1,0 +1,45 @@
+.product_left {
+  float: left;
+  border-right: 1px solid $searchTabColor;
+  width: $productLeftPageSize;
+  padding: 0 40px 20px 0;
+  box-sizing: border-box;
+  h1 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  &__labels {
+    margin-top: 12px;
+    a {
+      @include link_layout();
+      border: 1px solid $productLabelColor;
+      border-radius: 20px;
+      padding: 5px 10px;
+      display: inline-block;
+      margin-right: 10px;
+      color: $productLabelColor;
+    }
+  }
+  &__main-img {
+    width: 100%;
+    margin-top: 12px;
+    img {
+      width: 100%;
+    }
+  }
+  &__description {
+
+  }
+  &__sub-img {
+    width: 100%;
+    margin-top: 12px;
+    &__list {
+      margin-top: 5px;
+      &__item {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

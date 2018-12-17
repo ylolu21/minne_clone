@@ -1,0 +1,39 @@
+.product_right{
+  float: right;
+  box-sizing: border-box;
+  width: calc(100% - #{$productLeftPageSize});
+  padding: 0 0 20px 40px;
+  &__sell-frame {
+    font-size: 14px;
+    &__label {
+      margin-right: 10px;
+    }
+    &__price {
+      font-size: 18px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    &__quantity {
+      color: $productQuantityColor;
+      margin-right: 10px;
+    }
+    &__sales-count {
+      color: $productSalesCountColor;
+      margin-right: 10px;
+    }
+  }
+  &__sell-btn {
+    width: 100%;
+    margin-top: 15px;
+    &__add-cart {
+      background-color: $productAddCartBtnColor;
+      color: white;
+      box-sizing: border-box;
+      padding: 15px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

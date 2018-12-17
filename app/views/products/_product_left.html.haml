@@ -1,0 +1,21 @@
+.breadcrumb
+  - breadcrumb :products, @product
+  = render partial: 'layouts/breadcrumb'
+.product_left
+  %h1= @product.name
+  .product_left__labels
+    = link_to "特集掲載", product_path(@product.id)
+  .product_left__main-img
+    = image_tag 'noimage.png'
+  .product_left__description
+    商品説明文
+  .product_left__sub-img
+    %ul.product_left__sub-img__list
+      %li.product_left__sub-img__list__item
+        = image_tag 'noimage.png'
+      %li.product_left__sub-img__list__item
+        = image_tag 'noimage.png'
+      %li.product_left__sub-img__list__item
+        = image_tag 'noimage.png'
+      %li.product_left__sub-img__list__item
+        = image_tag 'noimage.png'

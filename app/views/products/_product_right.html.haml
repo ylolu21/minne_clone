@@ -1,0 +1,15 @@
+.product_right
+  .product_right__sell-frame
+    %span.product_right__sell-frame__label 価格
+    %span.product_right__sell-frame__price
+      = @product.price.to_s(:delimited, delimiter: ',')
+      円
+    %span.product_right__sell-frame__quantity
+      残り#{@product.quantity}点
+    %span.product_right__sell-frame__sales-count
+      ●人が購入しました
+
+  .product_right__sell-btn
+    .product_right__sell-btn__add-cart
+      カートに入れる
+

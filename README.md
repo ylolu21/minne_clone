@@ -146,7 +146,7 @@ Things you may want to cover:
 |:--:|:--:|:--:|
 |product_id|reference|null: false, foreign_key: true|
 |cart_id|reference|null: false, foreign_key: true|
-|sales_volume|reference|null: false, foreign_key: true|
+|sales_volume|reference|null: false|
 
 #### Association
 - belongs_to: carts
