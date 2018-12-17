@@ -4,17 +4,12 @@
     %span.product_right__sell-frame__price
       = @product.price.to_s(:delimited, delimiter: ',')
       円
-    // サンプルデータを投入後に切り替え
-    / - if @product.quantity <= 5
-    /   %span.puroduct_right__sell-framep__price-title
-    /     残り#{@product.quantity}点
     %span.product_right__sell-frame__quantity
       残り#{@product.quantity}点
     %span.product_right__sell-frame__sales-count
       ●人が購入しました
 
   .product_right__sell-btn
-    // ショッピングカートを実装するときに書き換え予定
     .product_right__sell-btn__add-cart
       カートに入れる
 
