@@ -10,6 +10,8 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @cart = current_cart
+    @cart_product = current_cart.cart_products.new
   end
 
   # GET /products/new
