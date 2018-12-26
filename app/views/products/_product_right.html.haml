@@ -10,6 +10,8 @@
       ●人が購入しました
 
   .product_right__sell-btn
-    .product_right__sell-btn__add-cart
-      カートに入れる
-
+    = form_for @cart_product, url: '/cart_products', method: :post do |f|
+      - if user_signed_in?
+        = f.hidden_field :user_id, value: current_user.id
+      = f.hidden_field :product_id, value: @product.id
+      = f.submit 'カートに入れる', class: 'product_right__sell-btn__add-cart'

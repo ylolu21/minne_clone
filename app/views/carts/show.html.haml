@@ -1,0 +1,23 @@
+.wrapper
+  .container
+    %h2.cart-title カートの中身
+    %table.cart-contents
+      %tbody
+        %tr.cart-contents__header
+          %th.cart-contents__header__name 作品名
+          %th.cart-contents__header__price 販売価格
+          %th.cart-contents__header__volume 数量
+          %th.cart-contents__header__subtotal 小計
+          %th.cart-contents__header__delete 削除
+        - @cart_products.each do |item|
+          %tr.cart-contents__product
+            %td= item.product.name
+            %td.text-right #{item.product.price.to_s(:delimited, delimiter: ',')}円
+            %td.text-center= item.sales_volume
+            %td.text-right #{(item.product.price*item.sales_volume).to_s(:delimited, delimiter: ',')}円
+            %td.cart-contents__product__delete= link_to "削除", cart_product_path(item.id), method: :delete
+    .cart-total
+      .cart-total__title 作品の小計
+      .cart_total__price #{@cart.total_price.to_s(:delimited, delimiter: ',')}円
+    .cart-shipping
+      = link_to "購入手続きへ", cart_path(@cart.id), class: 'cart-shipping__btn'

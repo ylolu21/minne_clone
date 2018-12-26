@@ -1,0 +1,91 @@
+.cart-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px 0 15px 0;
+}
+.cart-contents {
+  width: 100%;
+  tbody {
+    tr {
+      font-size: 14px;
+      width: 100%;
+      th, td {
+        padding: 10px;
+        border-right: 1px solid $cartProductTableBorderColor;
+        border-bottom: 1px solid $cartProductTableBorderColor;
+      }
+
+    }
+    .cart-contents__header {
+      background-color: gray;
+      color: white;
+      text-align: center;
+      th {
+        text-align: center;
+      }
+      &__name {
+        width: 40%;
+      }
+      &__price {
+        width: 20%;
+      }
+      &__volume {
+        width: 10%;
+      }
+      &__subtotal {
+        width: 20%;
+      }
+      &__delete {
+        width: 10%;
+        border-right: none;
+      }
+    }
+    .cart-contents__product {
+      &__delete {
+        border-right: none;
+      }
+    }
+    .text-right {
+      text-align: right;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .cart-contents__product__delete {
+      border-right: none;
+      text-align: center;
+      a {
+        @include link_layout();
+        color: $searchSidebarListItemColor;
+      }
+    }
+  }
+}
+.cart-total {
+  background-color: $searchTabColor;
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.cart-shipping {
+  margin: 30px;
+  width: calc(100% - 60px);
+  display: flex;
+  justify-content: center;
+  &__btn {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 35px;
+    border: 1px solid $cartShippingBtnColor;
+    color: $cartShippingBtnColor;
+    border-radius: 5px;
+    display: inline-block;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+}
+
