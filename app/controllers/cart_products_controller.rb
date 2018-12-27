@@ -1,6 +1,8 @@
 class CartProductsController < ApplicationController
+
   before_action :set_cart_product, only: [:show, :destroy]
   before_action :cart_product_params, only: [:new, :create, :delete]
+
   def new
     @cart_product = CartProduct.new
   end

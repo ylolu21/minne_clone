@@ -1,8 +1,8 @@
 class ProductsController < ApplicationController
+
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :set_category, only: :index
-  # GET /products
-  # GET /products.json
+
   def index
     # @products = @category.puroducts
   end

@@ -1,5 +1,7 @@
 class CartsController < ApplicationController
+
   before_action :set_cart_params, only: [:show]
+
   def new
     @cart = Cart.new
   end
