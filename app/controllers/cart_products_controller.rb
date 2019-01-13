@@ -10,6 +10,7 @@ class CartProductsController < ApplicationController
   def create
     @cart = current_cart
     @cart_product = @cart.cart_products.find_by_product_id(cart_product_params[:product_id])
+
     if @cart_product
       @cart_product.sales_volume += 1
     else
