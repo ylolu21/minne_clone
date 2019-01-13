@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   resources :users
   resources :products
   resources :categories
+  resources :carts
+  resources :cart_products
+  post '/cart_products' => 'cart_products#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
